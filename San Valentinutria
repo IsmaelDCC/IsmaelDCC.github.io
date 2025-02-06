@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentinutria?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Indie+Flower&display=swap');
+
+        body {
+            background-color: #ffcccc;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+        h1, h2 {
+            color: #ff6b6b;
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .yes-button {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .no-button {
+            background-color: #d9d9d9;
+            color: #333;
+        }
+        .heart, .tulip {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            animation: fall 5s infinite;
+        }
+        .heart {
+            background-color: #ff6b6b;
+            transform: rotate(-45deg);
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 10px;
+        }
+        .tulip {
+            background: url('https://path/to/tulip_image.png') no-repeat center center;
+            background-size: contain;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+            }
+            100% {
+                top: 110%;
+                opacity: 0;
+            }
+        }
+        .nutria-gif {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 250px;
+            height: auto;
+        }
+        .envelope-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem; /* Ajusta el tamaño según tus preferencias */
+            cursor: pointer;
+            z-index: 3;
+        }
+        .letter, .image-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: auto;
+            background-color: white;
+            border: 1px solid #800080;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 4;
+        }
+        .letter {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .image-container .text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            font-family: 'Indie Flower', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rebeca Agustín Muñoz</h2>
+        <img src="https://media1.tenor.com/m/uG0AZOy1b24AAAAd/nutria-otter.gif" alt="Nutria" class="nutria-gif">
+        <h1>¿Quieres ser mi San Valentinutria?</h1>
+        <div class="buttons">
+            <button class="button yes-button" onclick="showEnvelope()">Sí</button>
+            <button class="button no-button" onclick="showImage()">No</button>
+        </div>
+    </div>
+    <div class="envelope-container" id="envelope" onclick="showLetter()">
+        <div>💌</div>
+    </div>
+    <div class="letter" id="letter">
+        <p>Hola Mi Rebesukis. 🦦,</p>
+        <p>Me gustaria empezar esto diciendo, que no quiero poner cosas tristes pero solo quisiera decir que solo TU Y YO sabemos todo lo que hemos sufrido y aguantado hasta ahora y que a pesar de todo eso no ha muerto el cariño y amor que nos tenemos, por eso mismo me tome el atrevimiento y el reto de hacerte este html(pagina web) la verdad es que jamás en lo que me resta de vida se me va a olvidar estas palabras "Conmigo jamás serás espectador" y hoy quiero decirte lo mismo a ti "mientras este yo jamás serás espectadora" se que esto en algún momento lo llegaras a ver en alguna red social y dirás "a mi me hicieron uno de esos" Este es creo el primer 14 de Febrero que te doy un detalle y si no es así discúlpame, estoy malito de la memoria ya 🌷💖. Hemos pasado por tanto y quiero que sepas que a pesar de todo de corazon siempre estaré para ti por si algún día tienes ganas de hablar con alguien ahí estaré.🌷💖</p>
+        <p>Con amor,<br>Tu Nutria 🦦, Tu Natuz el amor de tu vida JAJA🌷💖</p>
+    </div>
+    <div class="image-container" id="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzBHJFCGQmiM_dojSs1rLFU_QLeTfVjZJs7Q&s" alt="Imagen">
+        <div class="text">Está bien, entonces este es el final de las nutrias, esta decisión no tiene marcha atrás y como consecuencia han muerto 2 nutrias para siempre ):</div>
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        function createTulip() {
+            const tulip = document.createElement('div');
+            tulip.classList.add('tulip');
+            tulip.style.left = `${Math.random() * 100}%`;
+            tulip.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            document.body.appendChild(tulip);
+            setTimeout(() => {
+                tulip.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+        setInterval(createTulip, 300);
+
+        function showEnvelope() {
+            document.querySelector('.container').style.display = 'none';
+            setTimeout(() => {
+                document.getElementById('envelope').style.display = 'block';
+            }, 1000); // Reducción del tiempo a 1 segundo
+        }
+
+        function showLetter() {
+            document.getElementById('envelope').style.display = 'none';
+            document.getElementById('letter').style.display = 'block';
+        }
+
+        function showImage() {
+            document.querySelector('.container').style.display = 'none';
+            setTimeout(() => {
+                document.getElementById('image').style.display = 'block';
+            }, 1000); // Reducción del tiempo a 1 segundo
+        }
+    </script>
+</body>
+</html>
